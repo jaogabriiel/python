@@ -1,3 +1,6 @@
-d = float(input('Quanto você tem?'))
-dolar = d / 5.22
-print('Você pode comprar {:.2f}US$ de dólar'.format(dolar))
+real = float(input('Quanto você tem? R$'))
+dolar = real / 5.22
+euro = real / 5.63
+libra = real / 6.73
+bitcoin = real / 88.289
+print('Você pode comprar {:.2f}US$ de dólar \n{:.2f} Euros \n{:.2f} Libras e \n{:.2f} bitcoins'.format(dolar, euro, libra, bitcoin))

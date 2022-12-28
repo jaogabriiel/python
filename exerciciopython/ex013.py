@@ -1,4 +1,4 @@
-salario = float(input('Digite seu salário: '))
-porcentagem = 15 / 100 * salario
-salarioFinal = salario + porcentagem
-print('Seu salário com um aumento de 15% é de {}R$'.format(salarioFinal))
+salário = float(input('Digite seu salário: R$'))
+aumento = 15 / 100 * salário
+salario_final = salário + aumento
+print('Seu salário de {}R$ com um aumento de 15% é de {:.2f}R$'.format(salário, salario_final))

@@ -1,21 +1,16 @@
-num1 = int(input('Digite o primeiro número: '))
-num2 = int(input('Digite o segundo número: '))
-num3 = int(input('Digite o terceiro número: '))
-if num1 > num2 and num1 > num3:
-    print('O número {} é o maior'.format(num1))
-elif num2 > num1 and num2 > num3:
-    print('O número {} é o maior'.format(num2))
-elif num3 > num1 and num3 > num2:
-    print('O número {} é o maior'.format(num3))
-else:
-    print('Informe números diferentes')
+a = int(input('Digite o primeiro número: '))
+b = int(input('Digite o segundo número: '))
+c = int(input('Digite o terceiro número: '))
+menor = a
+if b < a and b < c:
+    menor = b
+if c < a and c < b:
+    menor = c
     
-if num1 < num2 and num1 < num3:
-    print('O número {} é o menor'.format(num1))
-elif num2 < num1 and num2 < num3:
-    print('O número {} é o menor'.format(num2))
-elif num3 < num1 and num3 < num2:
-    print('O número {} é o menor'.format(num3))
-else:
-    print('Informe números diferentes')
-    
+maior = a
+if b > a and b > c:
+    maior = b
+if c > a and c > b:
+    maior = c
+print('O menor valor digitado foi {}'.format(menor))
+print('O maior valor digitado foi {}'.format(maior))

@@ -4,11 +4,11 @@ atual = date.today().year
 idade = atual - nas
 if idade <= 9:
     categoria = 'MIRIM'
-elif idade > 9 and idade <= 14:
+elif idade <= 14:
     categoria = 'INFANTIL'
-elif idade > 14 and idade <= 19:
+elif idade <= 19:
     categoria = 'JUNIOR'
-elif idade > 19 and idade <= 20:
+elif idade <= 25:
     categoria = 'SÊNIOR'
 else:
     categoria = 'MASTER'

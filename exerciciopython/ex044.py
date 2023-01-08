@@ -1,21 +1,25 @@
 preço = float(input('Digite o preço do produto: R$'))
-pagamento = int(input('Digite 0 para pagamento à vista, 1 para à vista no cartão, 2 para pagar em 2x no cartão e 3 para pagar em 3x ou mais no cartão: '))
-if pagamento == 0:
-    desconto = preço * 10 / 100
-    preço = preço - desconto
-elif pagamento == 1:
-    preço = preço - (preço * 5 / 100)
+pagamento = int(input('''
+FORMAS DE PAGAMENTO:
+[1] à vista dinheiro/cheque
+[2] à vista cartão
+[3] 2x no cartão
+[4] 3x ou mais no cartão
+Digite sua opção: '''))
+if pagamento == 1:
+    total = preço - (preço * 10 / 100)
 elif pagamento == 2:
-    preço = preço
+    total = preço - (preço * 5 / 100)
 elif pagamento == 3:
-    preço = preço + (preço * 20 / 100)
-    
-if pagamento == 0:
-    forma = 'À vista'
-elif pagamento == 1:
-    forma = 'À vista no cartão'
-elif pagamento == 2:
-    forma = '2x no cartão'
+    total = preço
+    parcela = total / 2
+    print('Sua compra será parcelada em 2x de R${:.2f} SEM JUROS'.format(parcela))
+elif pagamento == 4:
+    total = preço + (preço * 20 / 100)
+    par = int(input('Quantas parcelas? '))
+    parcela = total / par
+    print('Sua compra será parcelada em {}x de {:.2F} COM JUROS'.format(par, parcela))
 else:
-    forma = '3x ou mais no cartão'
-print('Você escolheu a forma de pagamento {}.O total a ser pago pelo produto é {}'.format(forma, preço))
+    total = preço
+    print('OPÇÃO INVÁLIDA')
+print('Sua compra de R${:.2f} vai custar R${:.2f} no final'.format(preço, total))

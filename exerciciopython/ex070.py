@@ -16,7 +16,7 @@ while True:
         opção = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]
     if opção in 'N':
         break
-print('-'*20)
+print('-'*25)
 print(f'O preço total das compras é {total}')
 print(f'{mais1000} produtos custam acima de R$1000')
 print(f'o produto mais barato é {barato} custando R${menor:.2f}')

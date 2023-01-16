@@ -1,19 +1,16 @@
-maior18 = 0
-homem = 0
-mulher20 = 0
+maior18 = homem = mulher20 = 0
 while True:
     print('-'*30)
-    idade = int(input('Digite sua idade: '))
-    if idade > 18:
+    idade = int(input('idade: '))
+    if idade >= 18:
         maior18 += 1
     sexo = ' '
     while sexo not in 'MF':
         sexo = str(input('Informe seu sexo: [M/F] ')).strip().upper()[0]
     if sexo in 'M':
         homem += 1
-    if sexo in 'M':
-        if idade < 20:
-            mulher20 += 1
+    if sexo in 'F'and idade < 20:
+        mulher20 += 1
     opção = ' '
     while opção not in 'SN':
         opção = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]

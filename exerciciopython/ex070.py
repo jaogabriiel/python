@@ -17,6 +17,6 @@ while True:
     if opção in 'N':
         break
 print('-'*25)
-print(f'O preço total das compras é {total}')
+print(f'O preço total das compras é R${total:.2f}')
 print(f'{mais1000} produtos custam acima de R$1000')
 print(f'o produto mais barato é {barato} custando R${menor:.2f}')

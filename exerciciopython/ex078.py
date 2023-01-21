@@ -1,6 +1,5 @@
 lista = []
-maior = 0
-menor = 0
+maior = menor = 0
 for c in range(0, 5):
     lista.append(int(input(f'Digite um valor para a posição {c}: ')))
     if c == 0:

@@ -2,11 +2,12 @@ lista = []
 while True:
     print('='*20)
     lista.append(int(input('Digite um valor: ')))
-    resp = str(input('Deseja continuar? ')).strip().upper()[0]
+    resp = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]
     while resp not in 'SN':
         resp = str(input('Deseja continuar? ')).strip().upper()[0]
     if resp in 'N':
         break
+print('-'*25)
 print(f'Foram digitados {len(lista)} números.')
 lista.sort(reverse=True)
 print(f'Os valores em ordem decrescente {lista}')

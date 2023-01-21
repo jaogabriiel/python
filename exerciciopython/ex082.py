@@ -6,9 +6,10 @@ while True:
     num.append(valor)
     resp = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]
     while resp not in 'SN':
-        resp = str(input('Deseja continuar? [S/N] ')).strip().upper()[0]
-    if resp in 'N':
+        resp = str(input('Deseja continuar? [S/N] ')).strip().lower()[0]
+    if resp in 'n':
         break
+print('='*25)
 print(f'Os valores digitados foram {num}')
 for c in num:
     if c % 2 == 0:

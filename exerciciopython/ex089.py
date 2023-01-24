@@ -15,7 +15,8 @@ while True:
     if resp in 'n':
         break
 print(pessoas)
-print('N°', end=' ')
-print('Nome', end=' ')
-print('Média')
-
+print('-'*20)
+for l, p in enumerate(pessoas):
+    print(l, end=' ')
+    print(p[0])
+    

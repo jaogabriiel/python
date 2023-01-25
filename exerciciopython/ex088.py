@@ -1,4 +1,5 @@
 from random import randint
+from time import sleep
 lista = list()
 jogos = list()
 qtd = int(input('Quantidade de jogos a serem sorteados: '))
@@ -18,3 +19,4 @@ while total <= qtd - 1:
     total += 1
 for i, j in enumerate(jogos):
     print(f'Jogo {i + 1} : {j}')
+    sleep(1)

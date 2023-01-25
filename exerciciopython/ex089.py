@@ -20,15 +20,15 @@ while True:
     if resp in 'n':
         break
 
-print('-'*20)
-print('N°', end=' ')
-print('Aluno', end=' ')
-print('Média')
+print('-'*30)
+print(f'{"N°":<4}', end=' ')
+print(f'{"Aluno":<10}', end=' ')
+print(f'{"Média":>8}')
 print('-'*30)
 for l, p in enumerate(pessoas):
-    print(f'{l:^5}', end=' ')
-    print(f'{p[0]:^5}', end=' ')
-    print(f'{(p[1] + p[2]) / 2:^5}') 
+    print(f'{l:<4}', end=' ')
+    print(f'{p[0]:<10}', end=' ')
+    print(f'{(p[1] + p[2]) / 2:>5}') 
 
 while True:
     print('-='*30)
@@ -36,9 +36,7 @@ while True:
     if mostrar == 999:
         break
     while mostrar >= len(pessoas) or mostrar < 0:
-        mostrar = int(input('Opção inválida.Tente novamente. (999 interrompe) '))
-    if mostrar == 999:
-        break
+        mostrar = int(input('Opção inválida.Tente novamente. '))
     print('='*50)
     print(f'Os dados do aluno {pessoas[mostrar][0]} são ', end=' ')
     print(pessoas[mostrar])

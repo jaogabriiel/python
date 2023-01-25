@@ -1,10 +1,10 @@
 pessoas = list()
 dados = list()
-cont = maior = menor = 0
+maior = menor = 0
 while True:
     nome = str(input('Nome: '))
     dados.append(nome)
-    peso = int(input('Peso: '))
+    peso = float(input('Peso: '))
     dados.append(peso)
     if len(pessoas) == 0:
         maior = menor = dados[1]
@@ -15,14 +15,14 @@ while True:
             menor = dados[1]
     pessoas.append(dados[:])
     dados.clear()
-    cont += 1
     resp = str(input('Deseja continuar? [S/N] ')).strip().lower()[0]
     while resp not in 'sn':
         resp = str(input('Deseja continuar? [S/N] ')).strip().lower()[0]
     if resp in 'n':
         break
 
-print(f'Foram cadastradas {cont} pessoas')
+print('='*40)
+print(f'Foram cadastradas {len(pessoas)} pessoas')
 print(f'O maior peso foi de {maior}Kg, que foi o peso do(a)', end=' ')
 for p in pessoas:
     if p[1] == maior:

@@ -16,7 +16,19 @@ while True:
         break
 print(pessoas)
 print('-'*20)
+print('N°', end=' ')
+print('Aluno', end=' ')
+print('Média')
+print('-'*20)
 for l, p in enumerate(pessoas):
     print(l, end=' ')
-    print(p[0])
-    
+    print(p[0], end=' ')
+    print((p[1] + p[2]) / 2) 
+
+while True:
+    mostrar = int(input('Quer ver os dados de qual aluno? (999 interrompe) '))
+    if mostrar == 999:
+        break
+    for i in pessoas:
+        print(i[mostrar])
+print('Fim do programa')

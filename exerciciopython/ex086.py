@@ -22,4 +22,3 @@ matriz[2].append(num9)
 print('A matriz 3x3 ficou assim: ')
 for c in range(0 ,3):
     print(matriz[c])
-

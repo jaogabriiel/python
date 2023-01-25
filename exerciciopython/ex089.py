@@ -1,9 +1,14 @@
 lista = []
 pessoas = []
 while True:
+    print('-='*20)
     nome = str(input('Nome: '))
-    nota1 = float(input('Nota 1: '))
-    nota2 = float(input('Nota 2: '))
+    nota1 = float(input('Digite sua 1° nota: '))
+    while nota1 > 10 or nota1 < 0:
+        nota1 = float(input('Digite uma nota válida entre 0 e 10: '))
+    nota2 = float(input('Digite sua 2° nota: '))
+    while nota2 > 10 or nota2 < 0:
+        nota2 = float(input('Digite uma nota válida entre 0 e 10: '))
     lista.append(nome)
     lista.append(nota1)
     lista.append(nota2)
@@ -14,21 +19,27 @@ while True:
         resp = str(input('Deseja continuar? [S/N] ')).strip().lower()[0]
     if resp in 'n':
         break
-print(pessoas)
+
 print('-'*20)
 print('N°', end=' ')
 print('Aluno', end=' ')
 print('Média')
-print('-'*20)
+print('-'*30)
 for l, p in enumerate(pessoas):
-    print(l, end=' ')
-    print(p[0], end=' ')
-    print((p[1] + p[2]) / 2) 
+    print(f'{l:^5}', end=' ')
+    print(f'{p[0]:^5}', end=' ')
+    print(f'{(p[1] + p[2]) / 2:^5}') 
 
 while True:
+    print('-='*30)
     mostrar = int(input('Quer ver os dados de qual aluno? (999 interrompe) '))
     if mostrar == 999:
         break
-    for i in pessoas:
-        print(i[mostrar])
+    while mostrar >= len(pessoas) or mostrar < 0:
+        mostrar = int(input('Opção inválida.Tente novamente. (999 interrompe) '))
+    if mostrar == 999:
+        break
+    print('='*50)
+    print(f'Os dados do aluno {pessoas[mostrar][0]} são ', end=' ')
+    print(pessoas[mostrar])
 print('Fim do programa')

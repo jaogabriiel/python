@@ -17,3 +17,6 @@ for i, v in dados.items():
 
 print('-='*30)
 print(f'O {dados["nome"]} jogou {partidas} partidas')
+for i, g in enumerate(gols):
+    print(f'=> Na {i + 1}° partida, {dados["nome"]} fez {gols[i]} gols')
+print(f'Foi um total de {dados["total"]} gols')

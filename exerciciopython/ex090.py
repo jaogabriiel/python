@@ -5,6 +5,7 @@ if boletim['Média'] >= 7:
     boletim['Situação'] = 'Aprovado'
 else:
     boletim['Situação'] = 'Reprovado'
-
+    
+print('-='*20)
 for i, v in boletim.items():
-        print(f'{i} é igual a {v}')
+    print(f'{i} é igual a {v}')

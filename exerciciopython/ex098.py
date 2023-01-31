@@ -19,11 +19,9 @@ def contador():
         passo = passo * (-1)
         print(f'Será considerado passo {passo}')
     if início > final:
-        final += 1
         passo *= -1
     for c in range(início, final + 1, passo):
-        print(c, end=' ')
-        
+        print(c, end=' ') 
     
         
 contador()

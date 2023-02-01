@@ -3,7 +3,7 @@ def contador(x, y, z):
     if z < 0:
         z *= -1
     if z == 0:
-        print('[ERRO] Será comsiderado a razão 1')
+        print('[ERRO] Será considerado a razão 1')
         z = 1
     print('-='*20)
     print(f'Contagem de {x} até {y} de {z} em {z}:')

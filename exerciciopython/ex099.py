@@ -1,7 +1,7 @@
 from time import sleep
 def maior(* núm):
     cont = maior = 0
-    print('-' * 60)
+    print('-' * 50)
     print('\nAnalisando os valores passados...')
     for v in núm:
         print(v, end=' ', flush=True)

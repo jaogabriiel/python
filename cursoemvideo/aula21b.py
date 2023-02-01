@@ -9,4 +9,4 @@ def somar(a = 0, b = 0, c = 0):
     print(f'A soma vale {s}')
     
     
-somar(c = 3, a = 2)
+somar(c = 5, a = 2)

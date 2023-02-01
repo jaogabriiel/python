@@ -1,27 +1,28 @@
 from time import sleep
-def linha():
-    print('-='*30)
-def contador():
-    print('Contagem de 1 a 10, de 1 em 1:')
-    for c in range(1, 11):     
-        print(c, end=' ')
-    print('\nContagem de 10 a 0, de 2 em 2')
-    for c in range(10, -1, -2):
-        print(c, end=' ')
-    print('\nAGORA É SUA VEZ!')
-    início = int(input('Início da contagem: '))
-    final = int(input('Final da contagem: '))
-    passo = int(input('Passo: '))
-    if passo == 0:
-        print('[ERRO]. Será considerado passo 1')
-        passo = 1
-    if passo < 0:
-        passo = passo * (-1)
-        print(f'Será considerado passo {passo}')
-    if início > final:
-        passo *= -1
-    for c in range(início, final + 1, passo):
-        print(c, end=' ') 
-    
-        
-contador()
+def contador(x, y, z):
+    if z < 0:
+        z *= -1
+    if z == 0:
+        print('[ERRO] Será comsiderado a razão 1')
+        z = 1
+    print('-='*20)
+    print(f'Contagem de {x} até {y} de {z} em {z}:')
+    if x < y:
+        sleep(1)
+        for c in range(x, y + 1, z):
+            print(c, end=' ', flush=True)
+            sleep(0.5)
+        print('FIM!')
+    elif x >= y:
+        for c in range(x, y - z , -z):
+            print(c, end=' ', flush=True)
+            sleep(0.5)
+        print('FIM!')
+
+contador(1, 10, 1)
+contador(10, 0, 2)
+print('Agora é a sua vez! Vamos personalizar a contagem')
+ini = int(input('Início da contagem:   '))
+fim = int(input('Final da contagem:   '))
+passo = int(input('Razão da contagem:   '))
+contador(ini, fim, passo)

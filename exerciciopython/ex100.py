@@ -1,16 +1,22 @@
 from random import randint
+from time import sleep
 sorteados = list()
-pares = list()
-def sorteio():
-    for c in range(1, 6):
-        sorteados.append(randint(1, 10))
-    print(f'Os números sorteados foram {sorteados}')
-    
-def soma_pares():
-    for v in sorteados:
-        if v % 2 == 0:
-            pares.append(v) 
-    print(f'Os números pares sorteados foram {pares} e a soma deles é {sum(pares)}')
+def sorteio(lista):
+    print('Sorteando os valores')
+    for cont in range(0, 5):
+        n = randint(1, 10)
+        lista.append(n)
+        print(f'{n}', end=' ', flush=True)
+        sleep(0.5)
 
-sorteio()
-soma_pares()
+    
+def soma_pares(lista):
+    soma = 0
+    for v in lista:
+        if v % 2 == 0:
+            soma += v
+    print(f'\nSomando os valores pares de {lista} obtemos {soma}')
+           
+            
+sorteio(sorteados)
+soma_pares(sorteados)

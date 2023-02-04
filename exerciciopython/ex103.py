@@ -1,16 +1,15 @@
-def ficha(txt, x):
-    if len(txt) == 0:
-        return 'desconhecido' 
-    elif len(txt) != 0:
-        return txt
-    
-    if len(x) == 0:
-        return 0
-    else:
-        return x
-    
+def ficha(jog='desconhecido', gol = 0):
+    print(f'O jogador {jog} fez {gol} gol(s) no campeonato.')
 
 nome = str(input('Nome do jogador: '))
-gols = int(input('Quantidade de gols: '))
-print(ficha(nome, gols))
-# print(f'O jogador {ficha(nome)} fez {ficha(gols)} gols')
+gols = str(input('Quantidade de gols: '))
+
+if gols.isnumeric():
+    gols = int(gols)
+else:
+    gols = 0
+    
+if nome.strip() == '':
+    ficha(gol= gols)
+else:
+    ficha(nome, gols)

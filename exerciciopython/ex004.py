@@ -1,4 +1,4 @@
-dado = input('Digite algo:')
+dado = input('Digite algo: ')
 print('O tipo primitivo deste dado é', type(dado))
 print('Só tem espaços? {}' .format(dado.isspace()))
 print('É um número? {}' .format(dado.isnumeric()))

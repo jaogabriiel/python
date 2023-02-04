@@ -5,4 +5,4 @@ dam = m / 10
 dm = m * 10
 c = m * 100
 mm = m * 1000
-print('O valor em Quilômetros é {}km \nem Hectômetro {}hm \nem Decâmetro {}dam \nem Decímetro {}dm \nem Centímetros {}cm e \nem Milímetros {}mm'.format(k, hm, dam, dm, c, mm))
+print('O valor em quilômetros é {}km \nem Hectômetro {}hm \nem Decâmetro {}dam \nem Decímetro {}dm \nem Centímetros {}cm e \nem Milímetros {}mm'.format(k, hm, dam, dm, c, mm))

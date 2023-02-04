@@ -1,4 +1,12 @@
 def notas(* notas, sit=False):
+    """
+    Função que recebe recebe notas como parâmetro e retorna algumas informações, como:
+    -> Número de notas informadas
+    -> Maior nota
+    -> Menor nota
+    -> A média entre as notas
+    -> A situação (opcional)
+    """
     n = dict()
     n['total'] = len(notas)
     n['maior'] = max(notas)
@@ -15,3 +23,4 @@ def notas(* notas, sit=False):
 
 resp = notas(4, 8.5, 9.3, 10, sit=True)
 print(resp)
+help(notas)

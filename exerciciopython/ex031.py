@@ -1,4 +1,4 @@
-dis = float(input('Quantos Km você vai viajar? '))
+dis = float(input('Quantos Km você vai viajar?  '))
 '''if dis <= 200:
     preço = 0.50 * dis
 else:

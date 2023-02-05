@@ -1,5 +1,6 @@
 nota1 = float(input('Primeira nota: '))
 nota2 = float(input('Segunda nota: '))
+
 média = (nota1 + nota2) / 2
 if média < 5.0:
     situação = 'Reprovado!'

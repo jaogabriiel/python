@@ -1,6 +1,7 @@
 from datetime import date
 
 veri = str(input('Qual seu sexo? Digite 0 para MASCULINO e 1 para FEMININO: '))
+
 if veri == '0':
     atual = date.today().year
     nasc = int(input('Ano de nascimento: '))

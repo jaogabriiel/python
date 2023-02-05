@@ -1,4 +1,5 @@
 from datetime import date
+
 nas = int(input('Digite seu ano de nascimento para informarmos sua categoria: '))
 atual = date.today().year
 idade = atual - nas

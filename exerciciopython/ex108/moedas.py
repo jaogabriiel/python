@@ -18,4 +18,4 @@ def metade(x = 0):
     return res
 
 def moeda(x = 0, moeda = 'R$'):
-    return f'{moeda}{x:.2f}'.replace('.', ',')
+    return f'{moeda}{x:>.2f}'.replace('.', ',')

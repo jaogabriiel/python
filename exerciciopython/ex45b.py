@@ -6,6 +6,7 @@ print('''Suas opções:
 [0] PEDRA
 [1] PAPEL
 [2] TESOURA ''')
+
 jogador = int(input('qual é a sua jogada? '))
 print('JO')
 sleep(1)
@@ -16,6 +17,7 @@ print('-=' * 15)
 print('O computador jogou {}'.format(intens[computador]))
 print('O jogador jogou {}'.format(intens[jogador]))
 print('-=' * 15)
+
 if computador == 0:
     if jogador == 0:
         print('EMPATOU')

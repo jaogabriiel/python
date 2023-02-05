@@ -1,5 +1,6 @@
 número1 = int(input('Digite um número: '))
 número2 = int(input('Digite outro número: '))
+
 if número1 > número2:
     print('O PRIMEIRO valor é o maior')
 elif número2 > número1:

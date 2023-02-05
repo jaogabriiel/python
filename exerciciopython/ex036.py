@@ -1,6 +1,7 @@
 valor = float(input('Valor da casa: R$'))
 salário = float(input('Salário: R$'))
 anos = int(input('Anos de financiamento: '))
+
 prestação = valor / (anos * 12)
 if prestação > salário * 30 / 100:
     emprestimo = 'NEGADO!'

@@ -6,6 +6,7 @@ FORMAS DE PAGAMENTO:
 [3] 2x no cartão
 [4] 3x ou mais no cartão
 Digite sua opção: '''))
+
 if pagamento == 1:
     total = preço - (preço * 10 / 100)
 elif pagamento == 2:

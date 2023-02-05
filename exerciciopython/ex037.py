@@ -3,6 +3,7 @@ print('''Escolha uma das bases para conversão:
 [1] conversão BINÁRIA
 [2] conversão OCTAL
 [3] conversão HEXADECIMAL''')
+
 opção = int(input('Sua opção: '))
 if opção == 1:
     print('{} convertido para BINÁRIO é igual a {}'.format(num, bin(num)[2:]))

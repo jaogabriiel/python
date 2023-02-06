@@ -11,7 +11,5 @@ def leiaInt(msg):
         if ok:
             break
     return valor
-        
-        
-n = leiaInt('Digite um número inteiro: ')
-print(f'Você digitou o número {n}')
+
+leiaInt('Digite um número: ')

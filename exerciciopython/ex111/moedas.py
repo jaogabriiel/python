@@ -47,19 +47,12 @@ def moeda(x = 0, moeda = 'R$'):
     """
     return f'{moeda}{x:>.2f}'.replace('.', ',')
 
-def resumo(x = 0, y = 10, z = 5):
-    """
-    Função que exibe informações de um determinado preço informado.
-    :param x: valor informado.
-    :param y: porcentagem de aumento.
-    :param z: porcentagem de redução.
-    """
-    print('~'*40)
-    print('RESUMO DO VALOR'.center(40))
-    print('~'*40)
-    print(f'Preço analisado: \t{moeda(x)}')
-    print(f'Dobro de {moeda(x)}: \t{dobro(x, True)}')
-    print(f'Metade do preço: \t{metade(x, True)}')
-    print(f'{y}% de aumento: \t{aumentar(x, y, True)}')
-    print(f'{z}% de redução: \t{diminuir(x, z, True)}')
-    print('~'*40)
+def resumo(x = 0, y = 0, z = 0):
+    print('='*20)
+    print('RESUMO DO VALOR')
+    print('='*20)
+    print(f'Preço analisado: {moeda(x)}')
+    print(f'Dobro de {moeda(x)}: {moeda(dobro(x))}')
+    print(f'Metade do preço: {moeda(metade(x))}')
+    print(f'{y}% de aumento: {moeda(aumentar(x, y))}')
+    print(f'{z}% de redução: {moeda(diminuir(x, z))}')
